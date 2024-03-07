@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mine</title>
+    <style>
+        body{background-color:rgba(89, 109, 129, 0.863);}
+        #main{ padding: 10px; margin: 0px auto; border: 2px solid grey; border-radius: 10px; height: 800px; width: 500px;}
+    </style>
+
+</head>
+<body  onload="autoplay()">
+    <div id="main">
+        <video id="myvideo" width="500px"  height="800px" controls  autoplay>  
+            <source src="me.mp4" type="video/mp4">
+            <source src="movie.ogg" type="video/ogg">
+        </video>
+    </div>
+    <script>
+        function autoplay(){
+            const video = document.getElementById("myvideo");
+            video.play();
+        }
+    </script>
+</body>
+
+</html>
