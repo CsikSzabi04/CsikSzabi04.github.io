@@ -1,0 +1,71 @@
+ body{
+    background-color: #2b2b2b;
+}
+.container{
+    background-image:url(alap.jpg);
+    border:solid 2px black;
+    padding: 5px;
+    margin: 10px;
+    
+}
+#kepem{
+    width: auto;
+    height: 210px;
+    border-radius: 20%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    float: none;
+
+    
+}
+h1{
+    color: brown;
+    border-bottom: solid 1px black;
+
+    
+}
+#első{
+    text-align: center;
+    color: darkred;
+    text-decoration: underline;
+    border-bottom: 0px;
+    
+}
+#második{
+    text-align: center;
+    border-bottom: 0px;
+}
+.nagybetűs{
+    text-transform:uppercase;
+    margin-left: 92px;
+    margin-top: 30px;
+    border-bottom: solid 1px black;
+    color: darkred;
+}
+p{
+    margin-left: 92px;
+    margin-top: 0px;
+    color: black;
+    margin-right: 30px;
+}
+#kép{
+    width: 50px;
+    height: 70px;
+    border-radius: 100%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+img{
+    height: 60px;
+    width: 70px;
+   float: right;
+   border-radius: 50%;
+}
+#profil{
+    padding-top: 63px;
+}
+.haha{
+    margin-right: 45px;
+}
