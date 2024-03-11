@@ -72,7 +72,6 @@
         }
         #git:hover{text-decoration: none;}
         #git{ width: 80px; height: 80px; font-size: 0pt; padding: 10px; margin-bottom: 40px; color: rgb(97, 15, 15);}
-        .box{text-align: center; }
         span img{width:100px; height:100px; margin-top: 10px; margin-bottom: 10px;}
         span a{ width: 100%; height: 100%; color: rgba(95, 32, 32, 0.733); text-decoration: none; font-size: 30px; text-align: center;}
         span a:hover{color: rgba(173, 33, 33, 0.541); text-decoration: none;}
@@ -112,10 +111,10 @@
                 transform: translateY(0);
             }
         }
-        #right{float: right;}
-        #left{float: left;}
-        .container{display:inline-block;}
-        #ezvan{text-align: center; }
+        #right{float:right; width: 100%; margin-left: 10px;}
+        #left{float: left;  width: 100%;}
+        #center img{width:60%; height: auto; } 
+        .container{ display:flex; align-items: center; text-align: center; height: auto; width: 100%; }
         #projecth2{text-align: left;}
     </style>
     <script>
@@ -135,8 +134,9 @@
         <h2>My projects<a id="git" href="https://github.com/csikszabi04" class="fa fa-github" style="font-size:40px;" target="blank">&copy;</a></a></h2>
     </header>
         <section class="animated box bigger" id="ezvan" class="box">
-            <div class="container row">
+            <div class="container ">
                 <div id="left"><a href="https://csikszabi04.github.io/magamrol/" target="_blank"></a> <h2 id="myself"><a href="https://csikszabi04.github.io/magamrol/" target="_blank">About Me &lt;--</a></h2> </div> 
+                <div id="center"><img src="01.jpg"></div>
                 <div id="right"><h2 id="myself"><a href="https://csikszabi04.github.io/secondH/" target="_blank">--&gt; About Me </a></h2> </div> 
             </div>
 
@@ -145,8 +145,7 @@
             <h2 id="projecth2">Projects</h2>
             <div id="main">
                <!--<li><a href="https://aDyon4.github.io/">(Ádám Dominik)</a></li>-->  
-               <span><a href="https://docs.google.com/document/d/11psX1mN5MhAkhkgF_YkFkN_qhjeeAcze5PIxdJcDgrk/edit" target="_blank" >History<img src="history.png" ></a>  </span>  
-               <span><a href=" https://csikszabi04.github.io/words/" target="_balnk">Word<img src="apple.png"></a> </span>
+               <span><a href="https://docs.google.com/document/d/11psX1mN5MhAkhkgF_YkFkN_qhjeeAcze5PIxdJcDgrk/edit" target="_blank" >History<img src="history.png" ></a>  </span>       
                <span><a href="https://csikszabi04.github.io/tetris/" target="_balnk">Tetris<img src="tetris.png"></a> </span>
                <span><a href="https://csikszabi04.github.io/mouse/eger.html" target="_blank">Mouse<img src="sajt.png" alt=""> </a></span>
                <span><a href="https://csikszabi04.github.io/Utvonal/" target="_blank">Route <img src="utvonal.png" alt=""></a></span>
