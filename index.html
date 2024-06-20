@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="hu">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -139,11 +138,16 @@
             transition: 0.3s;
             box-shadow: 0px 0px 10px black;
             border-radius: 15px;
-            display: inline-block;
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
             margin: 10px;
             text-align: center;
             animation: slideIn 1s ease-out;
+            position: relative;
+            text-align: center;
         }
+
 
         #git:hover {
             text-decoration: none;
@@ -159,10 +163,12 @@
         }
 
         span img {
-            width: 100px;
-            height: 100px;
+            width: 90px;
+            height: 90px;
             margin-top: 10px;
             margin-bottom: 10px;
+            max-width: 100%;
+          
         }
 
         span a {
@@ -268,7 +274,12 @@
             text-align: left;
         }
 
-        /* Töréspont 1200px-re */
+        @media (max-width: 1400px) {
+            span img{
+                width: 100px;
+                height: 100px;
+            }
+        }
         @media (max-width: 1200px) {
             h1 {
                 font-size: 3.5em;
@@ -289,6 +300,10 @@
             span {
                 width: 180px;
                 height: 180px;
+            }
+
+            span a{
+                font-size: 80%;
             }
 
             span img {
@@ -332,9 +347,13 @@
                 font-size: 35px;
             }
 
+            span a{
+                font-size: 60%;
+            }
+
             span img {
-                width: 80px;
-                height: 80px;
+                width: 70px;
+                height: 70px;
             }
         }
 
@@ -362,9 +381,24 @@
                 font-size: 30px;
             }
 
+            span a{
+                font-size: 50%;
+            }
+
             span img {
-                width: 70px;
-                height: 70px;
+                width: 50px;
+                height: 50px;
+            }
+        }
+
+        @media(max-width: 200px){
+            span img {
+                width: 30px;
+                height: 30px;
+            }
+
+            span a{
+                font-size: 30%;
             }
         }
     </style>
@@ -389,7 +423,8 @@
     <section class="animated box bigger" id="ezvan" class="box">
         <div class="container ">
             <div id="left"><a href="https://csikszabi04.github.io/magamrol/" target="_blank"></a>
-                <h2 id="myself"><a href="https://csikszabi04.github.io/magamrol/" target="_blank">Önéletrajz (CV) &lt;--</a>
+                <h2 id="myself"><a href="https://csikszabi04.github.io/magamrol/" target="_blank">Önéletrajz (CV)
+                        &lt;--</a>
                 </h2>
             </div>
             <div id="center"><img src="01.jpg"></div>
@@ -403,9 +438,6 @@
     <section class="animated  box bigger">
         <h2 id="projecth2">Projects</h2>
         <div id="main">
-            <!--<li><a href="https://aDyon4.github.io/">(Ádám Dominik)</a></li>-->
-            <span><a href="https://docs.google.com/document/d/11psX1mN5MhAkhkgF_YkFkN_qhjeeAcze5PIxdJcDgrk/edit"
-                    target="_blank">History<img src="history.png"></a> </span>
             <span><a href="https://csikszabi04.github.io/tetris/" target="_balnk">Tetris<img src="tetris.png"></a>
             </span>
             <span><a href="https://csikszabi04.github.io/mouse/eger.html" target="_blank">Mouse<img src="sajt.png"
@@ -434,8 +466,9 @@
         <p>
             Ready to dive into the abyss? Feel free to reach out to me for collaborations and inquiries.
         </p>
-        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alexszabi04@gmail.com&su=Collaboration%20Opportunity%20%2F%20Egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20Lehet%C5%91s%C3%A9g&body=Dear%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0AI%20would%20like%20to%20discuss%20a%20collaboration%20opportunity%20with%20you.%0A%0ABest%20regards,%0A%0A%5BYour%20Name%5D%0A%0A---%0A%0AKedves%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0ASzeretn%C3%A9k%20egy%20egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20lehet%C5%91s%C3%A9gr%C5%91l%20besz%C3%A9lni%20veled.%0A%0A%C3%9Cdv%C3%B6zlettel,%0A%0A%5BNeved%5D" target="_blank" class="button">Email Me</a>
-    </section>        
+        <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alexszabi04@gmail.com&su=Collaboration%20Opportunity%20%2F%20Egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20Lehet%C5%91s%C3%A9g&body=Dear%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0AI%20would%20like%20to%20discuss%20a%20collaboration%20opportunity%20with%20you.%0A%0ABest%20regards,%0A%0A%5BYour%20Name%5D%0A%0A---%0A%0AKedves%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0ASzeretn%C3%A9k%20egy%20egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20lehet%C5%91s%C3%A9gr%C5%91l%20besz%C3%A9lni%20veled.%0A%0A%C3%9Cdv%C3%B6zlettel,%0A%0A%5BNeved%5D"
+            target="_blank" class="button">Email Me</a>
+    </section>
     <footer class="animated ">
         <p class="heartbeat">&copy; 2024 Csík Szabolcs | Software-developer and -tester</p>
     </footer>
