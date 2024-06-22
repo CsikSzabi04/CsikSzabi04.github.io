@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,9 +35,10 @@
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
         }
 
+
         h2 {
             animation: rotateColor 5s infinite linear;
-            animation: flicker 1s infinite alternate-reverse;
+
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             font-size: 2.5em;
             margin-top: 5px;
@@ -491,8 +493,19 @@
         }
 
         .fa {
-            width: 40px;
+            font-size: 25px;
+            margin-right: 10px;
         }
+
+        #git {
+            width: 80px;
+            height: 80px;
+            font-size: 0pt;
+            padding: 10px;
+            margin-bottom: 40px;
+            color: rgb(97, 15, 15);
+        }
+
 
         .overlay {
             position: fixed;
@@ -532,6 +545,30 @@
                 opacity: 1;
                 transform: rotateY(0deg);
             }
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            background-color: #461212;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #801b1bb4;
+        }
+
+        #leftname {
+            position: absolute;
+            left: 20px;
+            top: 10px;
+            color: #fff;
+            font-size: 1.2em;
+            font-weight: bold;
         }
     </style>
     <script>
@@ -578,6 +615,7 @@
 <body>
     <header>
         <div class="upper-div">
+            <div id="leftname">Cs_Szabj04</div>
             <div id="right">
                 <a href="https://www.instagram.com/cs_szabj04/" target="_blank"><i class="fa fa-instagram"></i></a>
                 <a target="_blank"
@@ -637,6 +675,12 @@
             <span><a href="video.html" target="_blank">?<img src="questionmark.png" alt=""></a> </span>
         </div>
     </section>
+    <section class="animated box bigger">
+        <h2>Songs</h2>
+        <p>I also create music! Check out my playlist on Suno:</p>
+        <a href="https://suno.com/playlist/c2a17272-47ef-4d14-b727-f9e61a2a7705" target="_blank" class="button">Listen
+            on Suno</a>
+    </section>
     <section class="animated bigger" id="contact">
         <h2>Contact Me</h2>
         <p>
@@ -645,6 +689,7 @@
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alexszabi04@gmail.com&su=Collaboration%20Opportunity%20%2F%20Egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20Lehet%C5%91s%C3%A9g&body=Dear%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0AI%20would%20like%20to%20discuss%20a%20collaboration%20opportunity%20with%20you.%0A%0ABest%20regards,%0A%0A%5BYour%20Name%5D%0A%0A---%0A%0AKedves%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0ASzeretn%C3%A9k%20egy%20egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20lehet%C5%91s%C3%A9gr%C5%91l%20besz%C3%A9lni%20veled.%0A%0A%C3%9Cdv%C3%B6zlettel,%0A%0A%5BNeved%5D"
             target="_blank" class="button">Email Me</a>
     </section>
+
     <footer class="animated ">
         <p class="heartbeat">&copy; 2024 Csík Szabolcs | Software-developer and -tester</p>
     </footer>
