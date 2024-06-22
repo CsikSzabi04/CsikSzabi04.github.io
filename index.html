@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,6 +16,7 @@
             color: #ffffff;
             padding: 0;
             margin: 0;
+            scroll-behavior: smooth;
         }
 
         header {
@@ -168,7 +170,7 @@
             margin-top: 10px;
             margin-bottom: 10px;
             max-width: 100%;
-          
+
         }
 
         span a {
@@ -221,6 +223,15 @@
             animation: heartbeat 2s infinite;
         }
 
+        #projecth2 {
+            font-size: 2em;
+        }
+
+        #projecth2:hover {
+            color: #ff0000;
+        }
+
+
         @keyframes heartbeat {
 
             0%,
@@ -256,11 +267,7 @@
             width: 100%;
         }
 
-        #center img {
-            width: 100%;
-            max-width: 600px;
-            height: auto;
-        }
+
 
         .container {
             display: flex;
@@ -275,23 +282,31 @@
         }
 
         @media (max-width: 1400px) {
-            span img{
+            span img {
                 width: 100px;
                 height: 100px;
             }
+
         }
+
         @media (max-width: 1200px) {
             h1 {
                 font-size: 3.5em;
+            }
+
+            .round-image  {
+                width: 170px;
+                height: 170px;
+                overflow: hidden;
+                display: block;
+                border-radius: 50%;
             }
 
             h2 {
                 font-size: 2em;
             }
 
-            #center img {
-                width: 80%;
-            }
+ 
 
             section {
                 width: 85%;
@@ -302,7 +317,7 @@
                 height: 180px;
             }
 
-            span a{
+            span a {
                 font-size: 80%;
             }
 
@@ -312,19 +327,23 @@
             }
         }
 
-        /* Töréspont 700px-re */
         @media (max-width: 700px) {
             h1 {
                 font-size: 3em;
+            }
+
+            .round-image  {
+                width: 130px;
+                height: 130px;
+                overflow: hidden;
+                display: block;
+                border-radius: 70%;
             }
 
             h2 {
                 font-size: 1.8em;
             }
 
-            #center img {
-                width: 70%;
-            }
 
             section {
                 width: 90%;
@@ -347,7 +366,7 @@
                 font-size: 35px;
             }
 
-            span a{
+            span a {
                 font-size: 60%;
             }
 
@@ -357,19 +376,25 @@
             }
         }
 
-        /* Töréspont 400px-re */
         @media (max-width: 400px) {
             h1 {
                 font-size: 2.5em;
+            }
+
+
+            .round-image  {
+                width: 100px;
+                height: 100px;
+                overflow: hidden;
+                display: block;
+                border-radius: 50%;
             }
 
             h2 {
                 font-size: 1.5em;
             }
 
-            #center img {
-                width: 60%;
-            }
+
 
             section {
                 width: 95%;
@@ -381,7 +406,7 @@
                 font-size: 30px;
             }
 
-            span a{
+            span a {
                 font-size: 50%;
             }
 
@@ -391,15 +416,82 @@
             }
         }
 
-        @media(max-width: 200px){
+        @media(max-width: 200px) {
             span img {
                 width: 30px;
                 height: 30px;
             }
 
-            span a{
+
+            .round-image  {
+                width: 70px;
+                height: 70px;
+                overflow: hidden;
+                display: block;
+                border-radius: 50%;
+            }
+
+            span a {
                 font-size: 30%;
             }
+        }
+
+        .upper-div {
+            color: #791b1bd5;
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1c1c1c;
+
+        }
+
+        .upper-div h1 {
+            display: block;
+            float: center;
+        }
+
+        .upper-div #right {
+            flex: 1;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .upper-div a {
+            color: #791b1bd5;
+            margin-left: 10px;
+        }
+
+        .upper-div a:hover {
+            color: #cccccc;
+        }
+
+        .upper-div .button {
+            background-color: #461212;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .upper-div .button:hover {
+            background-color: #801b1bb4;
+        }
+
+        .round-image {
+            width: 200px;
+            height: 200px;
+            overflow: hidden;
+            border-radius: 50%;
+        }
+
+        .round-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .fa{
+            width: 40px;
         }
     </style>
     <script>
@@ -416,18 +508,33 @@
 
 <body>
     <header>
-        <h1>Csík Szabolcs Alex</h1>
+        <div class="upper-div">
+            <div id="right">
+                <a href="https://www.instagram.com/cs_szabj04/" target="_blank"><i class="fa fa-instagram"></i></a>
+                <a target="_blank"
+                    href="https://mail.google.com/mail/?view=cm&fs=1&to=alexszabi04@gmail.com&su=Collaboration%20Opportunity%20%2F%20Egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20Lehet%C5%91s%C3%A9g&body=Dear%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0AI%20would%20like%20to%20discuss%20a%20collaboration%20opportunity%20with%20you.%0A%0ABest%20regards,%0A%0A%5BYour%20Name%5D%0A%0A---%0A%0AKedves%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0ASzeretn%C3%A9k%20egy%20egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20lehet%C5%91s%C3%A9gr%C5%91l%20besz%C3%A9lni%20veled.%0A%0A%C3%9Cdv%C3%B6zlettel,%0A%0A%5BNeved%5D"><i
+                        class="fa fa-envelope"></i></a>
+                <a href="https://www.linkedin.com/in/szabolcs-cs%C3%ADk-a4b767315/" target="_blank"><i
+                        class="fa fa-linkedin"></i></a>
+            </div>
+            <h1>Csík Szabolcs Alex</h1>
+
+        </div>
         <h2>My projects<a id="git" href="https://github.com/csikszabi04" class="fa fa-github" style="font-size:40px;"
                 target="blank">&copy;</a></a></h2>
     </header>
     <section class="animated box bigger" id="ezvan" class="box">
         <div class="container ">
             <div id="left"><a href="https://csikszabi04.github.io/magamrol/" target="_blank"></a>
-                <h2 id="myself"><a href="https://csikszabi04.github.io/magamrol/" target="_blank">Önéletrajz (CV)
-                        &lt;--</a>
-                </h2>
+                <h2 id="myself"><a href="https://csikszabi04.github.io/magamrol/" target="_blank">Önéletrajz
+                        (CV)&lt;--</a></h2>
             </div>
-            <div id="center"><img src="01.jpg"></div>
+            <div id="center">
+                <div class="round-image">
+                    <img src="02.jpg">
+                </div>
+            </div>
+
             <div id="right">
                 <h2 id="myself"><a href="https://csikszabi04.github.io/secondH/" target="_blank">--&gt; About Me </a>
                 </h2>
