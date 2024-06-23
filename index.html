@@ -38,7 +38,6 @@
 
         h2 {
             animation: rotateColor 5s infinite linear;
-
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
             font-size: 2.5em;
             margin-top: 5px;
@@ -288,6 +287,12 @@
                 height: 100px;
             }
 
+            .notlikeall {
+                width: 88%;
+                display: block;
+
+            }
+
         }
 
         @media (max-width: 1200px) {
@@ -308,6 +313,17 @@
             }
 
 
+            .notlikeall {
+                width: 90%;
+                display: block;
+
+            }
+
+            .notlikeall {
+                width: 60%;
+                display: block;
+                margin: 0px 50px;
+            }
 
             section {
                 width: 85%;
@@ -345,6 +361,11 @@
                 font-size: 1.8em;
             }
 
+            .notlikeall {
+                width: 95%;
+                display: block;
+
+            }
 
             section {
                 width: 90%;
@@ -570,6 +591,46 @@
             font-size: 1.2em;
             font-weight: bold;
         }
+
+        .row {
+            display: flex;
+        }
+
+        .smaller {
+            padding: 15px;
+            margin-bottom: 20px;
+        }
+
+        .songs-signin-container {
+            display: block;
+            justify-content: space-between;
+            align-items: center;
+            width: 88%;
+        }
+
+        .songs,
+        .signin {
+            width: 48%;
+        }
+
+        .signin.inactive {
+            opacity: 0.5;
+            pointer-events: none;
+        }
+
+        .notlikeall {
+            background-color: #2b2b2b;
+            border: none;
+            box-shadow: none;
+            width: 88%;
+            animation: fadeIn 1s ease-out forwards;
+            animation: slideIn 1s ease-out;
+        }
+
+        .notlikeall h3 {
+            color: rgb(97, 15, 15);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+        }
     </style>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
@@ -607,7 +668,12 @@
             });
         });
 
-
+        document.addEventListener('DOMContentLoaded', function() {
+        document.querySelector('.button').addEventListener('click', function() {
+            const signinSection = document.querySelector('.signin');
+            signinSection.classList.add('inactive');
+        });
+    });
     </script>
 
 </head>
@@ -675,12 +741,32 @@
             <span><a href="video.html" target="_blank">?<img src="questionmark.png" alt=""></a> </span>
         </div>
     </section>
-    <section class="animated box bigger">
-        <h2>Songs</h2>
-        <p>I also create music! Check out my playlist on Suno:</p>
-        <a href="https://suno.com/playlist/c2a17272-47ef-4d14-b727-f9e61a2a7705" target="_blank" class="button">Listen
-            on Suno</a>
+    <section class="adnimated notlikeall">
+        <div class="row ">
+            <div class="col-md-6">
+                <section class="animated box smaller">
+                    <div class="songs-signin-container">
+                        <div class="songs">
+                            <h2>Songs</h2>
+                            <p>I also create music! Check out my playlist on Suno:</p>
+                            <a href="https://suno.com/playlist/c2a17272-47ef-4d14-b727-f9e61a2a7705" target="_blank"
+                                class="button">Listen on Suno</a>
+                        </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <section>
+                    <div class="signin">
+                        <h3>Sign In/Sign Up</h3>
+                        <a href="https://csikszabi04.github.io/signin/" class="button">Sign Up / In</a>
+                    </div>
+                </section>
+            </div>
+
+        </div>
     </section>
+
+
     <section class="animated bigger" id="contact">
         <h2>Contact Me</h2>
         <p>
