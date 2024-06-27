@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,7 +10,7 @@
     <link rel="icon" type="image/x-icon" href="letöltés.png">
     <title>Portfolio</title>
     <style>
-        body { font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #2b2b2b; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
+        body { font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #2b2b2b; background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
         header {  text-align: center;padding: 10px 0;  background-color: #1c1c1c;  margin-bottom: 25px; }
         h1 {  padding-top: 10px;  font-size: 4em;   margin: 0;  color: #5e1212;   letter-spacing: 3px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
         h2 {  animation: rotateColor 5s infinite linear;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  font-size: 2.5em;  margin-top: 5px;   margin-bottom: 10px;   color: #791b1bd5;   animation: slideIn 1s ease-out; }
@@ -177,7 +178,7 @@
         .smaller { padding: 15px;  margin-bottom: 20px;}
         .songs-signin-container {  display: block;  justify-content: space-between;  align-items: center;  width: 88%; }
         .signin.inactive {opacity: 0.5; pointer-events: none; }
-        .notlikeall {  background-color: #2b2b2b;  border: none;  box-shadow: none;  width: 88%; animation: fadeIn 1s ease-out forwards; animation: slideIn 1s ease-out; }
+        .notlikeall {  background-color: #2b2b2b00;  border: none;  box-shadow: none;  width: 88%; animation: fadeIn 1s ease-out forwards; animation: slideIn 1s ease-out; }
         .notlikeall h3 { color: rgb(97, 15, 15); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);}
         #suno { width: 100%; opacity: 0.8;}
                 /* -----------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -376,6 +377,14 @@
         }
         #emailp{ font-size: 1rem; color: green;}
         #or{margin: 10px 20px;}
+
+        .toggle {  position : relative ;  display : inline-block;  width : 40px; height : 20px;  background-color: #1c1c1c;  border-radius: 30px; border: 2px solid rgb(48, 48, 48);  }   
+        .toggle:after { content: '';  position: absolute; width: 16px;  height: 16px; border-radius: 50%; background-color: rgb(43, 43, 43); left: 1px;  transition:  all 0.5s;}     
+        p { font-family: Arial, Helvetica, sans-serif;   font-weight: bold;   font-size: 10px;    }  
+        .checkbox:checked + .toggle::after {   left : 30px;  }    
+        .checkbox:checked + .toggle { background-color: rgb(0, 19, 128);}    
+        .checkbox { display : none;}
+        #sadss{width: 15px; height: 15px;}
     </style>
 
 </head>
@@ -387,6 +396,11 @@
                 <a href="https://www.instagram.com/cs_szabj04/" target="_blank"><i class="fa fa-instagram"></i></a>
                 <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=alexszabi04@gmail.com&su=Collaboration%20Opportunity%20%2F%20Egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20Lehet%C5%91s%C3%A9g&body=Dear%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0AI%20would%20like%20to%20discuss%20a%20collaboration%20opportunity%20with%20you.%0A%0ABest%20regards,%0A%0A%5BYour%20Name%5D%0A%0A---%0A%0AKedves%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0ASzeretn%C3%A9k%20egy%20egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20lehet%C5%91s%C3%A9gr%C5%91l%20besz%C3%A9lni%20veled.%0A%0A%C3%9Cdv%C3%B6zlettel,%0A%0A%5BNeved%5D"><i class="fa fa-envelope"></i></a>
                 <a href="https://www.linkedin.com/in/szabolcs-cs%C3%ADk-a4b767315/" target="_blank"><i class="fa fa-linkedin"></i></a>
+                <br>
+                <div id="sadss">
+                    <input type="checkbox" id="switch" class="checkbox"/>
+                    <label for="switch" class="toggle" onclick="navigateToPage()"></label>
+                </div>
             </div>
             <h1>Csík Szabolcs Alex</h1>
         </div>
@@ -438,7 +452,7 @@
                                 </div>
                                 <div class="col-5 ">    
                                     <p>
-                                    <a href="https://suno.com/playlist/08dc9ca7-c085-47ad-847f-ef0189a3ebfb" target="_blank"><img src="0003.png" class="img-fluid" id="suno"></a></p>
+                                    <a href="https://suno.com/playlist/08dc9ca7-c085-47ad-847f-ef0189a3ebfb" target="_blank"><img src="003.png" class="img-fluid" id="suno"></a></p>
                                 </div>
                             </div>
                         </div>
@@ -564,7 +578,14 @@
             }
         });
 
-   
+        function navigateToPage() {
+            var isChecked = document.getElementById('switch').checked;
+            if (isChecked) {
+                window.location.href = "https://csikszabi04.github.io/"; 
+            } else {
+                window.location.href =  "https://csikszabi04.github.io/portfolioblue/"; 
+            }
+        }
     </script>
 </body>
 
