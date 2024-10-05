@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="hu">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -433,6 +434,16 @@
         .skill a{ margin-left: 5px; text-decoration: underline;}
         .skill h3{ color: #461212;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  }
         .m{  margin-left: 5px;}
+        #scroll-down {font-size: 1em; color: #fff;animation: bounce 2s infinite;}
+        @keyframes bounce {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        #picdiv{margin-left: 10px; }
     </style>
 
 </head>
@@ -453,6 +464,7 @@
             <h1>Csík Szabolcs Alex</h1>
         </div>
         <h2>My projects<a id="git" href="https://github.com/csikszabi04" class="fa fa-github" style="font-size:40px;" target="blank">&copy;</a></a></h2>
+        <div id="scroll-down">↓</div> <!--Scrolls down-->
     </header>
     <section class="animated box bigger" id="ezvan" class="box">
         <div class="container ">
@@ -460,7 +472,7 @@
                 <h2 id="myself"><a href="https://csikszabi04.github.io/magamrol/" target="_blank">Önéletrajz (CV)&lt;--</a></h2>
             </div>
             <div id="center">
-                <div class="round-image">
+                <div class="round-image" id="picdiv">
                     <img src="02.jpg">
                 </div>
             </div>
@@ -470,6 +482,11 @@
             </div>
         </div>
 
+    </section>
+    <section id="about" class="animated box bigger skill">
+        <h3>&#9824; Skills</h3>
+        <p>I'm a Software-developer and Tester</p>
+        <h4 class="projecth4"> <p>If you want to know about my web developer skills<a href="https://csikszabi04.github.io/secondH/" target="_blank">click here</a></p> </h4>
     </section>
     <section class="animated  box bigger">
         <h2 id="projecth2">&#9830; Projects</h2>
@@ -487,11 +504,7 @@
             <span><a href="video.html" target="_blank">?<img src="questionmark.png" alt=""></a> </span>
         </div>
     </section>
-    <section class="animated box bigger skill">
-        <h3>&#9824; Skills</h3>
-        <p>I'm a Software-developer and Tester</p>
-        <h4 class="projecth4"> <p>If you want to know about my web developer skills<a href="https://csikszabi04.github.io/secondH/" target="_blank">click here</a></p> </h4>
-    </section>
+
     <section class="adnimated notlikeall">
         <div class="row ">
             <div class="col-md-6 ">
@@ -616,6 +629,13 @@
                 window.location.href =  "https://csikszabi04.github.io/portfolioblue/"; 
             }
         }
+
+        document.getElementById('scroll-down').addEventListener('click', function () {
+            window.scrollTo({
+                top: document.getElementById('about').offsetTop,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
 
