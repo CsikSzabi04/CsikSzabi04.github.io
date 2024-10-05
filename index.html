@@ -221,6 +221,9 @@
                 width: 90px;
                 height: 90px;
             }
+            .slideshow-container {
+                margin-left: 45%;
+            }
         }
 
         @media (max-width: 700px) {
@@ -260,6 +263,11 @@
             .sor{
                 display: inline-block;
             }
+            .slideshow-container {
+                margin-left: 105%;
+                height: 100px;
+            }
+            .slide img {  width: 50%; height: auto;  border-radius: 10px; }
         }
 
         @media (max-width: 400px) {
@@ -302,6 +310,9 @@
             #sads{opacity: 0;}
             #leftname{font-size: small;}
             .skill p{font-size: 10px;}
+            .slideshow-container {
+                margin-left: 10%; float: right; height: 100px;
+            }
         }
 
         @media(max-width: 384px){
@@ -333,6 +344,10 @@
             span img {
                 width: 1px; height: 1px; opacity: 0;
             }
+            .slideshow-container {
+                margin-left: 10%;
+                float: right;
+            }
         }
 
         @media(max-width: 200px) {
@@ -353,6 +368,9 @@
             }
             span a {
                 font-size: 30%;
+            }
+            .slideshow-container {
+                margin-left: 5%; float: right;
             }
         }
 
@@ -384,9 +402,7 @@
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
         }
 
-        .form-container h2 {
-            margin-bottom: 20px;
-        }
+        .form-container h2 {  margin-bottom: 20px;}
 
         .form-container input {
             width: calc(100% - 22px);
@@ -444,6 +460,41 @@
             }
         }
         #picdiv{margin-left: 10px; }
+
+        /* slideshow*/
+
+        .slideshow-container {
+            margin-top: 10px;
+            margin-left: 55%;
+            float: left;
+            position: relative;
+            width: 40%;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 1s ease; 
+        }
+
+        .slide {
+            min-width: 60%; 
+            transition: opacity 1s ease; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0; 
+        }
+
+        .slide img {  width: 90%; height: auto;  border-radius: 10px; }
+
+        .slide.hidden {  opacity: 0; }
+
+        .slide.side { opacity: 0.5;  }
+
+        .slide.active {  opacity: 1; }
+        
     </style>
 
 </head>
@@ -484,10 +535,40 @@
 
     </section>
     <section id="about" class="animated box bigger skill">
-        <h3>&#9824; Skills</h3>
-        <p>I'm a Software-developer and Tester</p>
-        <h4 class="projecth4"> <p>If you want to know about my web developer skills<a href="https://csikszabi04.github.io/secondH/" target="_blank">click here</a></p> </h4>
+        <div class="row">
+            <div class="col-md-6 ">
+                <div id="skillsdiv">
+                    <h3>&#9824; Skills</h3>
+                    <p>I'm a Software-developer and Tester</p>
+                    <h4 class="projecth4"> <p>If you want to know about my web developer skills<a href="https://csikszabi04.github.io/secondH/" target="_blank">click here</a></p> </h4>    
+                </div>
+            </div>
+            <div class="col-md-6 ">
+                <div class="slideshow-container">
+                    <div class="slides">
+                        <div class="slide hidden">
+                            <img src="letöltés.jpg" alt="Image 1">
+                        </div>
+                        <div class="slide side">
+                            <img src="letöltés.jpg" alt="Image 2">
+                        </div>
+                        <div class="slide active">
+                            <img src="letöltés.jpg" alt="Image 3">
+                        </div>
+                        <div class="slide side">
+                            <img src="letöltés.jpg" alt="Image 4">
+                        </div>
+                        <div class="slide hidden">
+                            <img src="letöltés.jpg" alt="Image 5">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
     </section>
+
+
     <section class="animated  box bigger">
         <h2 id="projecth2">&#9830; Projects</h2>
         <div id="main">
@@ -636,6 +717,38 @@
                 behavior: 'smooth'
             });
         });
+
+
+
+
+        let slideIndex = 1;
+        let slides = document.getElementsByClassName('slide');
+        let totalSlides = slides.length;
+
+        function showSlides() {
+            const slidesContainer = document.querySelector('.slides');
+            slidesContainer.style.transform = `translateX(-${(slideIndex * 120) / 2}%)`;
+            for (let i = 0; i < totalSlides; i++) {
+                slides[i].classList.remove('active');
+                slides[i].classList.remove('side');
+                slides[i].classList.remove('hidden');
+
+                if (i === (slideIndex + totalSlides - 1) % totalSlides) {
+                    slides[i].classList.add('side');
+                } else if (i === (slideIndex + 1) % totalSlides) {
+                    slides[i].classList.add('side'); 
+                } else if (i === slideIndex) {
+                    slides[i].classList.add('active'); 
+                } else {
+                    slides[i].classList.add('hidden'); 
+                }
+            }
+
+            slideIndex = (slideIndex + 1) % totalSlides; 
+            setTimeout(showSlides, 2000); 
+        }
+
+        showSlides(); 
     </script>
 </body>
 
