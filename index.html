@@ -13,7 +13,7 @@
         ::-webkit-scrollbar {  display: none;}
         ::-webkit-scrollbar-thumb {   background: rgba(85, 23, 23, 0.26);   border-radius: 6px; }
         ::-webkit-scrollbar-track {    background: #1c1c1c;    border-radius: 6px; }
-        body {scroll-behavior: smooth; font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #000000; background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
+        body {overflow-x: hidden; scroll-behavior: smooth; font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #000000; background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
         header {  text-align: center;padding: 10px 0;  background-color: #1c1c1c;  margin-bottom: 25px; }
         h1 {  padding-top: 10px;  font-size: 4em;   margin: 0;  color: #5e1212;   letter-spacing: 3px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
         h2 {  animation: rotateColor 5s infinite linear;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  font-size: 2.5em;  margin-top: 5px;   margin-bottom: 10px;   color: #791b1bd5;   animation: slideIn 1s ease-out; }
@@ -38,13 +38,21 @@
         }
         @keyframes rotateColor {
             0% {
-                filter: hue-rotate(0deg);
+                color: #ff0000; 
             }
-
+            25% {
+                color: #ff6347;
+            }
+            50% {
+                color: #ff4500; 
+            }
+            75% {
+                color: #ff7f50; 
+            }
             100% {
-                filter: hue-rotate(360deg);
+                color: #ff0000; 
             }
-        }
+                    }
 
         @keyframes flicker {
 
@@ -498,6 +506,78 @@
 
         .slide.active {  opacity: 1; }
         
+
+        /*-------------------------------*/
+
+    .project {
+      flex: 1 1 400px;
+      margin: 1em;
+      border: 2px solid #c97d5e;
+      border-radius: 15px;
+      padding: 1em;
+      background-color: #191919;
+      box-shadow: 0px 0px 20px #c97d5e;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+      animation: fadeIn 1s ease-out;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .project:before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(to bottom, rgba(25, 25, 25, 0), #191919);
+      pointer-events: none;
+    }
+
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 0px 30px #c97d5e;
+    }
+
+    .projectss {
+      padding: 2em;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+
+    .project h2 {
+      color: #c97d5e;
+      font-size: 2em;
+      text-shadow: 3px 3px 6px #000000;
+      animation: rotateColor 5s infinite linear;
+      margin-bottom: 0.5em;
+    }
+
+    .project-description {
+      font-size: 1.3em;
+      animation: slideIn 1s ease-out;
+    }
+
+    .social-icons {
+      display: flex;
+      justify-content: center;
+      margin-top: 2em;
+      animation: fadeIn 1s ease-out;
+    }
+
+    .social-icon {
+      margin: 0 1em;
+      font-size: 3em;
+      color: #c97d5e;
+      transition: color 0.5s ease-in-out;
+      animation: float 3s infinite ease-in-out;
+    }
+
+    .social-icon:hover {
+      color: #9c5f48;
+    }
+
     </style>
 
 </head>
@@ -589,6 +669,32 @@
         </div>
     </section>
 
+    <section class="animated bigger" class="projectss">
+        <div class="row">
+            <div class="project col-md-4">
+                <h2>Timeless Web Presence</h2>
+                <p class="project-description">
+                  Crafted a web presence that exudes sophistication and stands the test of time. Combining elegance with modernity, this creation reflects the essence of enduring style.
+                </p>
+              </div>
+          
+              <div class="project col-md-4">
+                <h2>Enigmatic App Development</h2>
+                <p class="project-description">
+                  Developed an enigmatic mobile app that seamlessly blends mystery with intuitive design. Users will be drawn into a world of intrigue, experiencing the extraordinary through seamless functionality.
+                </p>
+              </div>
+          
+              <div class="project col-md-4">
+                <h2>Sublime Data Insights</h2>
+                <p class="project-description">
+                  Engineered a data analytics platform that unravels the mysteries of user behavior. Dive into the sublime realm of analytics to uncover insights and optimize strategic decisions.
+                </p>
+              </div>         
+        </div>
+
+    </section>
+
     <section class="adnimated notlikeall">
         <div class="row ">
             <div class="col-md-6 ">
@@ -630,6 +736,8 @@
             </div>
         </div>
     </section>
+ 
+
 
     <section class="animated bigger" id="contact">
         <h2>Contact Me</h2>
