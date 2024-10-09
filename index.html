@@ -13,7 +13,7 @@
         ::-webkit-scrollbar {  display: none;}
         ::-webkit-scrollbar-thumb {   background: rgba(85, 23, 23, 0.26);   border-radius: 6px; }
         ::-webkit-scrollbar-track {    background: #1c1c1c;    border-radius: 6px; }
-        body {overflow-x: hidden; scroll-behavior: smooth; font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #000000; background-image: url("ds.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
+        body {overflow-x: hidden;  scroll-behavior: smooth; font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #000000; background-image: url("ds.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
         header {  text-align: center;padding: 10px 0;  background-color: #1c1c1c;  margin-bottom: 25px; }
         h1 { animation: rotateColor 5s infinite linear;  padding-top: 10px;  font-size: 4em;   margin: 0;  color: #5e1212;   letter-spacing: 3px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
         h2 {  animation: rotateColor 5s infinite linear;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  font-size: 2.5em;  margin-top: 5px;   margin-bottom: 10px;   color: #791b1bd5;   animation: slideIn 1s ease-out; }
@@ -580,13 +580,22 @@
       color: #9c5f48;
     }
     #i{width: 60%; height: 30%;}
+
+    /* Matrix */
+    .particles { position: absolute; background-size: cover; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden;  background-color: black;  z-index: 999;  overflow: hidden;  }
+    .particle {  position: absolute;   width: 1px;  height: 10px;  background-color: rgb(110, 33, 33);   opacity: 0.8;  animation: fall linear infinite;  }
+    .number { position: absolute; font-size: 20px;  color: rgb(255, 0, 0);  opacity: 0.8; white-space: nowrap; animation: fall linear infinite; }
+    @keyframes fall { 0% { transform: translateY(-100vh); }  100% {transform: translateY(100vh); } }
+    .hide {  opacity: 0;  transition: opacity 1s ease;  }
+    .scrollable {overflow: auto; }
     </style>
 
 </head>
-<body>
-    <header>
-        <div class="upper-div">
-            <div id="leftname">Cs_Szabj04 <br> <p id="emailp"></p></div>
+<body onload="start();">
+    <div class="particles"></div>
+    <header >
+        <div class="upper-div ">
+            <div  id="leftname">Cs_Szabj04 <br> <p id="emailp"></p></div>
             <div id="right">
                 <a href="https://www.instagram.com/cs_szabj04/" target="_blank"><i class="fa fa-instagram"></i></a>
                 <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=alexszabi04@gmail.com&su=Collaboration%20Opportunity%20%2F%20Egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20Lehet%C5%91s%C3%A9g&body=Dear%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0AI%20would%20like%20to%20discuss%20a%20collaboration%20opportunity%20with%20you.%0A%0ABest%20regards,%0A%0A%5BYour%20Name%5D%0A%0A---%0A%0AKedves%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0ASzeretn%C3%A9k%20egy%20egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20lehet%C5%91s%C3%A9gr%C5%91l%20besz%C3%A9lni%20veled.%0A%0A%C3%9Cdv%C3%B6zlettel,%0A%0A%5BNeved%5D"><i class="fa fa-envelope"></i></a>
@@ -618,7 +627,7 @@
             </div>
         </div>
 
-    </section>
+    </section >
     <section id="about" class="animated box bigger skill">
         <div class="row d">
             <div class="col-md-6 ">
@@ -738,7 +747,6 @@
             </div>
         </div>
     </section>
- 
 
 
     <section class="animated bigger" id="contact">
@@ -746,13 +754,17 @@
         <p class="m"> Ready to dive into the abyss? Feel free to reach out to me for collaborations and inquiries.</p>
         <a href="https://mail.google.com/mail/?view=cm&fs=1&to=alexszabi04@gmail.com&su=Collaboration%20Opportunity%20%2F%20Egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20Lehet%C5%91s%C3%A9g&body=Dear%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0AI%20would%20like%20to%20discuss%20a%20collaboration%20opportunity%20with%20you.%0A%0ABest%20regards,%0A%0A%5BYour%20Name%5D%0A%0A---%0A%0AKedves%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0ASzeretn%C3%A9k%20egy%20egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20lehet%C5%91s%C3%A9gr%C5%91l%20besz%C3%A9lni%20veled.%0A%0A%C3%9Cdv%C3%B6zlettel,%0A%0A%5BNeved%5D" target="_blank" class="button">Email Me</a>
     </section>
-
+   
     <footer class="animated ">
         <p class="heartbeat">&copy; 2024 Csík Szabolcs | Software-developer and -tester  &#128511;</p>
     </footer>
 
 
     <script>
+        function start() {
+            window.scrollTo(0, 0); 
+        };
+
         document.addEventListener('DOMContentLoaded', function () {
             const animatedElements = document.querySelectorAll('.animated');
             animatedElements.forEach(element => {
@@ -862,6 +874,33 @@
         }
 
         showSlides(); 
+
+
+        // Matrix
+        window.onload = function() {
+            document.body.style.overflow = 'scroll';
+            window.scrollTo(top);
+            document.body.style.overflow = 'hidden'; 
+        }
+        const particlesContainer = document.querySelector('.particles');
+        const numberCount = 150; 
+
+        for (let i = 0; i < numberCount; i++) {
+            const number = document.createElement('div');
+            number.classList.add('number');
+            number.textContent = Math.floor(Math.random() * 10); 
+            number.style.left = Math.random() * 100 + 'vw';
+            number.style.animationDuration = Math.random() * 3 + 2 + 's';
+            particlesContainer.appendChild(number);
+        }
+        document.body.style.overflow = 'hidden'; 
+        function hideNumbers() {
+            particlesContainer.classList.add('hide'); 
+            document.body.style.overflow = 'scroll';
+        }
+        setTimeout(hideNumbers, 3000);
+
+
     </script>
 </body>
 
