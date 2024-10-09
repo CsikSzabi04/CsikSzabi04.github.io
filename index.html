@@ -13,7 +13,7 @@
         ::-webkit-scrollbar {  display: none;}
         ::-webkit-scrollbar-thumb {   background: rgba(85, 23, 23, 0.26);   border-radius: 6px; }
         ::-webkit-scrollbar-track {    background: #1c1c1c;    border-radius: 6px; }
-        body {overflow-x: hidden; scroll-behavior: smooth; font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #000000;  background-image: url("ds.jpg");  background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
+        body {overflow-x: hidden; scroll-behavior: smooth; font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #000000; background-image: url("ds.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
         header {  text-align: center;padding: 10px 0;  background-color: #1c1c1c;  margin-bottom: 25px; }
         h1 { animation: rotateColor 5s infinite linear;  padding-top: 10px;  font-size: 4em;   margin: 0;  color: #5e1212;   letter-spacing: 3px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
         h2 {  animation: rotateColor 5s infinite linear;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  font-size: 2.5em;  margin-top: 5px;   margin-bottom: 10px;   color: #791b1bd5;   animation: slideIn 1s ease-out; }
@@ -484,6 +484,8 @@
             overflow: hidden;
         }
 
+        .slideshow-container img{max-width: 165px; max-height: 165px; }
+
         .slides {
             display: flex;
             transition: transform 1s ease; 
@@ -577,7 +579,7 @@
     .social-icon:hover {
       color: #9c5f48;
     }
-
+    #i{width: 60%; height: 30%;}
     </style>
 
 </head>
@@ -618,7 +620,7 @@
 
     </section>
     <section id="about" class="animated box bigger skill">
-        <div class="row">
+        <div class="row d">
             <div class="col-md-6 ">
                 <div id="skillsdiv">
                     <h3>&#9824; Skills</h3>
@@ -626,7 +628,7 @@
                     <h4 class="projecth4"> <p>If you want to know about my web developer skills<a href="https://csikszabi04.github.io/secondH/" target="_blank">click here</a></p> </h4>    
                 </div>
             </div>
-            <div class="col-md-6 ">
+            <div class="col-md-6 " id="i">
                 <div class="slideshow-container">
                     <div class="slides">
                         <div class="slide hidden">
@@ -647,8 +649,8 @@
                     </div>
                 </div>
             </div>
-            </div>
         </div>
+        
     </section>
 
 
