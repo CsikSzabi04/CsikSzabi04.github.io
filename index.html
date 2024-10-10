@@ -582,7 +582,7 @@
     #i{width: 60%; height: 30%;}
 
     /* Matrix */
-    .particles { position: absolute; background-size: cover; top: 0; left: 0; width: 100vw; height: 100vh; overflow: hidden;  background-color: black;  z-index: 999;  overflow: hidden;  }
+    .particles { position: absolute; background-size: cover; top: 0; left: 0;  width: 100%; height: 100%; overflow: hidden; background-color: black;  z-index: 999;   }
     .particle {  position: absolute;   width: 1px;  height: 10px;  background-color: rgb(110, 33, 33);   opacity: 0.8;  animation: fall linear infinite;  }
     .number { position: absolute; font-size: 20px;  color: rgb(255, 0, 0);  opacity: 0.8; white-space: nowrap; animation: fall linear infinite; }
     @keyframes fall { 0% { transform: translateY(-100vh); }  100% {transform: translateY(100vh); } }
@@ -845,7 +845,6 @@
 
 
 
-
         let slideIndex = 0;
         let slides = document.getElementsByClassName('slide');
         let totalSlides = slides.length;
@@ -877,29 +876,57 @@
 
 
         // Matrix
-        window.onload = function() {
-            document.body.style.overflow = 'scroll';
-            window.scrollTo(top);
-            document.body.style.overflow = 'hidden'; 
+        function scrollToTop(speed = 1000) { 
+            const headerOffset = document.querySelector('header').offsetTop;
+            const startPosition = window.pageYOffset;
+            const distance = headerOffset - startPosition;
+            let startTime = null;
+
+            function animation(currentTime) {
+                if (startTime === null) startTime = currentTime;
+                const timeElapsed = currentTime - startTime;
+                const run = ease(timeElapsed, startPosition, distance, speed);
+                window.scrollTo(0, run);
+
+                if (timeElapsed < speed) {
+                    requestAnimationFrame(animation);
+                }
+            }
+            function ease(t, b, c, d) {
+                t /= d / 2;
+                if (t < 1) return c / 2 * t * t + b;
+                t--;
+                return -c / 2 * (t * (t - 2) - 1) + b;
+            }
+            requestAnimationFrame(animation);
         }
+
+        window.onload = scrollToTop;
+        document.body.style.overflow = 'hidden'; 
         const particlesContainer = document.querySelector('.particles');
-        const numberCount = 150; 
+        const numberCount = 100; 
 
         for (let i = 0; i < numberCount; i++) {
             const number = document.createElement('div');
             number.classList.add('number');
-            number.textContent = Math.floor(Math.random() * 10); 
+            number.textContent = Math.floor(Math.random() * 10);
             number.style.left = Math.random() * 100 + 'vw';
-            number.style.animationDuration = Math.random() * 3 + 2 + 's';
+            number.style.animationDuration = Math.random() * 3 + 2 + 's'; 
             particlesContainer.appendChild(number);
         }
-        document.body.style.overflow = 'hidden'; 
-        function hideNumbers() {
-            particlesContainer.classList.add('hide'); 
-            document.body.style.overflow = 'scroll';
-        }
-        setTimeout(hideNumbers, 3000);
 
+        function hideMatrixEffectAndScroll() {
+            particlesContainer.classList.add('hide'); 
+            setTimeout(() => {
+                particlesContainer.style.display = 'none';
+                document.body.style.overflow = 'scroll'; 
+                window.scrollTo({
+                    top: document.querySelector('header').offsetTop, 
+                    behavior: 'smooth'
+                });
+            }, 1000); 
+        }
+        setTimeout(hideMatrixEffectAndScroll, 3000);
 
     </script>
 </body>
