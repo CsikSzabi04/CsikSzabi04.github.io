@@ -22,7 +22,7 @@
         section #container {    width: 110%; }
         .project {   margin-bottom: 30px;}
         .projecth4 a {    color: #ffffffec;   margin-bottom: 10px; }
-        .project h3, h4 {    color: #7a1d1dec;   margin-bottom: 10px; }
+        .project h3, h4 {    color: #961919ec;   margin-bottom: 10px; }
         footer {   text-align: center;     padding: 20px;  background-color: #1c1c1c;    color: #999999; position: relative;   opacity: 0.5;    bottom: 0; width: 100%;}
         .animated {  opacity: 0; animation: fadeIn 1s ease-out forwards; }
         @keyframes fadeIn {
@@ -191,7 +191,7 @@
         .songs-signin-container {  display: block;  justify-content: space-between;  align-items: center;  width: 88%; }
         .signin.inactive {opacity: 0.5; pointer-events: none; }
         .notlikeall {  background-color: #2b2b2b00;  border: none;  box-shadow: none;  width: 88%; animation: fadeIn 1s ease-out forwards; animation: slideIn 1s ease-out; }
-        .notlikeall h3 { color: rgb(97, 15, 15); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);}
+        .notlikeall h3 { color: rgb(126, 18, 18); text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);}
         #suno { width: 100%; opacity: 0.8;}
                 /* -----------------------------------------------------------------------------------------------------------------------------------------------------*/
 
@@ -457,11 +457,12 @@
         .checkbox:checked + .toggle { background-color: rgb(0, 19, 128);}    
         .checkbox { display : none;}
         #sadss{width: 15px; height: 15px;}
-        .skill p{font-size: 20px; margin-left: 5px; }
+        .skill p{font-size: 20px; margin-left: 30px; }
         .skill a{ margin-left: 5px; text-decoration: underline;}
-        .skill h3{ color: #461212;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  }
+        .skill h3{ color: #771717;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  }
+        .skill h4{margin-left: 20px;}
         .m{  margin-left: 5px;}
-        #scroll-down {font-size: 1em; color: #fff;animation: bounce 2s infinite;}
+        #scroll-down {font-size: 1em; color: #fff;animation: bounce 2s infinite; cursor: pointer;}
         @keyframes bounce {
             0%, 100% {
                 transform: translateY(0);
@@ -476,15 +477,15 @@
 
         .slideshow-container {
             margin-top: 10px;
-            margin-left: 55%;
+            margin-left: 30%;
             float: left;
             position: relative;
-            width: 40%;
-            height: 200px;
+            width: 60%;
+            height: 400px;
             overflow: hidden;
         }
 
-        .slideshow-container img{max-width: 165px; max-height: 165px; }
+        .slideshow-container img{max-width: 200px; max-height: 200px; }
 
         .slides {
             display: flex;
@@ -498,6 +499,29 @@
             justify-content: center;
             align-items: center;
             opacity: 0; 
+        }
+
+        .image-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .image-container .hover-text {
+            position: absolute;
+            top: 120%;
+            left: 42%;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+            padding: 10px;
+            border-radius: 5px;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+
+        /* Show the text when hovering over the container */
+        .image-container:hover .hover-text {
+            opacity: 1;
         }
 
         .slide img {  width: 90%; height: auto;  border-radius: 10px; }
@@ -579,7 +603,7 @@
     .social-icon:hover {
       color: #9c5f48;
     }
-    #i{width: 60%; height: 30%;}
+    #i{width:110%; height: 50%;}
 
     /* Matrix */
     .particles { position: absolute; background-size: cover; top: 0; left: 0;  width: 100%; height: 100%; overflow: hidden; background-color: black;  z-index: 999;   }
@@ -634,29 +658,56 @@
                 <div id="skillsdiv">
                     <h3>&#9824; Skills</h3>
                     <p>I'm a Software-developer and Tester</p>
-                    <h4 class="projecth4"> <p>If you want to know about my web developer skills<a href="https://csikszabi04.github.io/secondH/" target="_blank">click here</a></p> </h4>    
+                    <!-- <h4 class="projecth4"> <p>If you want to know about my web developer skills<a href="https://csikszabi04.github.io/secondH/" target="_blank">click here</a></p> </h4>     -->
+                     <h4>Backend</h4>
+                     <p>I love problem-solving and building complex systems.
+                        I strive to create scalable, reliable, and secure solutions.</p>
+                    <h4>Frontend & Design</h4>
+                    <p>I'm passionate about design, animation, and interactions, always aiming to build fun websites with great user experiences.
+                        I have worked on web, mobile, and game development projects.</p>
+                    <h4>Cloud & DevOps</h4>
+                    <p>I have managed AWS, GCP, Github and various other cloud services for multiple start-ups and my own projects.</p>
                 </div>
             </div>
             <div class="col-md-6 " id="i">
                 <div class="slideshow-container">
                     <div class="slides">
-                        <div class="slide hidden">
+                        <div class="slide hidden image-container">
                             <img src="html.png" alt="Image 1">
+                            <div class="hover-text">Html</div>
                         </div>
-                        <div class="slide side">
+                        <div class="slide side image-container">
                             <img src="css.png" alt="Image 2">
+                            <div class="hover-text">Css</div>
                         </div>
-                        <div class="slide active">
+                        <div class="slide active image-container">
                             <img src="js.png" alt="Image 3">
+                            <div class="hover-text">Js</div>
                         </div>
-                        <div class="slide side">
+                        <div class="slide side image-container">
                             <img src="node.png" alt="Image 4">
+                            <div class="hover-text">NodeJs</div>
                         </div>
-                        <div class="slide side">
-                            <img src="giticon.png" alt="Image 5">
+                        <div class="slide side image-container">
+                            <img src="php.png" alt="Image 5">
+                            <div class="hover-text">Php</div>
+                        </div>
+                        <div class="slide side image-container">
+                            <img src="giticon.png" alt="Image 6">
+                            <div class="hover-text">GitHub</div>
+                        </div>
+                        <div class="slide side image-container">
+                            <img src="c++.png" alt="Image 7">
+                            <div class="hover-text">C++</div>
+                        </div>
+                        <div class="slide side image-container">
+                            <img src="csharp.svg" alt="Image 8">
+                            <div class="hover-text">C#</div>
                         </div>
                     </div>
+                    
                 </div>
+
             </div>
         </div>
         
