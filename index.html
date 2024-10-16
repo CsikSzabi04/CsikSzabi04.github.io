@@ -13,7 +13,7 @@
         ::-webkit-scrollbar {  display: none;}
         ::-webkit-scrollbar-thumb {   background: rgba(85, 23, 23, 0.26);   border-radius: 6px; }
         ::-webkit-scrollbar-track {    background: #1c1c1c;    border-radius: 6px; }
-        body {overflow-x: hidden;  scroll-behavior: smooth; font-family: 'Comic Sans MS', cursive, sans-serif; background-color: #000000; background-image: url("ds.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
+        body {overflow-x: hidden;  scroll-behavior: smooth; font-family: 'Courier New', cursive, sans-serif; background-color: #000000; background-image: url("ds.jpg"); background-position: center; background-repeat: no-repeat; background-size: cover; color: #ffffff; padding: 0; margin: 0; scroll-behavior: smooth; }
         header {  text-align: center;padding: 10px 0;  background-color: #1c1c1c;  margin-bottom: 25px; }
         h1 { animation: rotateColor 5s infinite linear;  padding-top: 10px;  font-size: 4em;   margin: 0;  color: #5e1212;   letter-spacing: 3px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
         h2 {  animation: rotateColor 5s infinite linear;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  font-size: 2.5em;  margin-top: 5px;   margin-bottom: 10px;   color: #791b1bd5;   animation: slideIn 1s ease-out; }
@@ -235,6 +235,12 @@
             .slideshow-container {
                 margin-left: 45%;
             }
+            p{
+                font-size: 2vw;
+            }
+            .m p{
+                font-size: 2vw;
+            }
         }
 
         @media (max-width: 700px) {
@@ -279,6 +285,12 @@
                 height: 100px;
             }
             .slide img {  width: 50%; height: auto;  border-radius: 10px; }
+            p{
+                font-size: 1.4vw;
+            }
+            .m p{
+                font-size: 1.4vw;
+            }
         }
 
         @media (max-width: 400px) {
@@ -324,6 +336,15 @@
             .slideshow-container {
                 margin-left: 10%; float: right; height: 100px;
             }
+            body{
+                font-size: 1.2vw;
+            }
+            .sk p{
+                font-size: 1.2vw;
+            }
+            .m p{
+                font-size: 1.2vw;
+            }
         }
 
         @media(max-width: 384px){
@@ -341,6 +362,12 @@
                 font-size: 1rem;
             }
             #leftname{font-size: small;}
+            body{
+                font-size: 1.1vw;
+            }
+            .sk p{
+                font-size: 1.1.vw;
+            }
         }
 
         @media(max-width: 340px){
@@ -358,6 +385,15 @@
             .slideshow-container {
                 margin-left: 10%;
                 float: right;
+            }
+            body{
+                font-size: 1.1vw;
+            }
+            .sk p{
+                font-size: 1.1vw;
+            }
+            .m p{
+                font-size: 1.1vw;
             }
         }
 
@@ -382,6 +418,9 @@
             }
             .slideshow-container {
                 margin-left: 5%; float: right;
+            }
+            body{
+                font-size: 1vw;
             }
         }
 
@@ -457,7 +496,7 @@
         .checkbox:checked + .toggle { background-color: rgb(0, 19, 128);}    
         .checkbox { display : none;}
         #sadss{width: 15px; height: 15px;}
-        .skill p{font-size: 20px; margin-left: 30px; }
+        .skill p{font-size: 100%; margin-left: 30px; }
         .skill a{ margin-left: 5px; text-decoration: underline;}
         .skill h3{ color: #771717;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  }
         .skill h4{margin-left: 20px;}
@@ -481,7 +520,7 @@
             float: left;
             position: relative;
             width: 60%;
-            height: 400px;
+            height: 100%;
             overflow: hidden;
         }
 
@@ -512,14 +551,13 @@
             left: 42%;
             transform: translate(-50%, -50%);
             color: white;
-            background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+            background-color: rgba(0, 0, 0, 0.5); 
             padding: 10px;
             border-radius: 5px;
             opacity: 0;
             transition: opacity 0.3s ease;
         }
 
-        /* Show the text when hovering over the container */
         .image-container:hover .hover-text {
             opacity: 1;
         }
@@ -612,6 +650,7 @@
     @keyframes fall { 0% { transform: translateY(-100vh); }  100% {transform: translateY(100vh); } }
     .hide {  opacity: 0;  transition: opacity 1s ease;  }
     .scrollable {overflow: auto; }
+    #center{margin: 0 auto; display:inline-block ; }
     </style>
 
 </head>
@@ -619,7 +658,7 @@
     <div class="particles"></div>
     <header >
         <div class="upper-div ">
-            <div  id="leftname">Cs_Szabj04 <br> <p id="emailp"></p></div>
+            <div  id="leftname" class="logo">Cs_Szabj04 <br> <p id="emailp"></p></div>
             <div id="right">
                 <a href="https://www.instagram.com/cs_szabj04/" target="_blank"><i class="fa fa-instagram"></i></a>
                 <a target="_blank" href="https://mail.google.com/mail/?view=cm&fs=1&to=alexszabi04@gmail.com&su=Collaboration%20Opportunity%20%2F%20Egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20Lehet%C5%91s%C3%A9g&body=Dear%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0AI%20would%20like%20to%20discuss%20a%20collaboration%20opportunity%20with%20you.%0A%0ABest%20regards,%0A%0A%5BYour%20Name%5D%0A%0A---%0A%0AKedves%20Cs%C3%ADk%20Szabolcs%20Alex,%0A%0ASzeretn%C3%A9k%20egy%20egy%C3%BCttm%C5%B1k%C3%B6d%C3%A9si%20lehet%C5%91s%C3%A9gr%C5%91l%20besz%C3%A9lni%20veled.%0A%0A%C3%9Cdv%C3%B6zlettel,%0A%0A%5BNeved%5D"><i class="fa fa-envelope"></i></a>
@@ -630,7 +669,7 @@
                     <label for="switch" class="toggle" onclick="navigateToPage()"></label>
                 </div>
             </div>
-            <h1>Csík Szabolcs Alex</h1>
+            <h1 style="font-size:5vw">Csík Szabolcs Alex</h1>
         </div>
         <h2>My projects<a id="git" href="https://github.com/csikszabi04" class="fa fa-github" style="font-size:40px;" target="blank">&copy;</a></a></h2>
         <div id="scroll-down">↓</div> <!--Scrolls down-->
@@ -646,18 +685,17 @@
                 </div>
             </div>
             <div id="right">
-               <h2 id="myself"><a  href="CV.png" download="CV.png" target="_blank">--&gt; Download CV</a></h2>
-                <!--<h2 id="myself"><a href="https://csikszabi04.github.io/secondH/" target="_blank">--&gt; About Me </a></h2>-->
-            </div>
+                <h2 id="myself"><a  href="CV.png" download="CV.png" target="_blank">--&gt; Download CV</a></h2>
+             </div>
         </div>
 
     </section >
     <section id="about" class="animated box bigger skill">
         <div class="row d">
             <div class="col-md-6 ">
-                <div id="skillsdiv">
+                <div id="skillsdiv" class="sk">
                     <h3>&#9824; Skills</h3>
-                    <p>I'm a Software-developer and Tester</p>
+                    <p >I'm a Software-developer and Tester</p>
                     <!-- <h4 class="projecth4"> <p>If you want to know about my web developer skills<a href="https://csikszabi04.github.io/secondH/" target="_blank">click here</a></p> </h4>     -->
                      <h4>Backend</h4>
                      <p>I love problem-solving and building complex systems.
@@ -670,44 +708,48 @@
                 </div>
             </div>
             <div class="col-md-6 " id="i">
-                <div class="slideshow-container">
-                    <div class="slides">
-                        <div class="slide hidden image-container">
-                            <img src="html.png" alt="Image 1">
-                            <div class="hover-text">Html</div>
-                        </div>
-                        <div class="slide side image-container">
-                            <img src="css.png" alt="Image 2">
-                            <div class="hover-text">Css</div>
-                        </div>
-                        <div class="slide active image-container">
-                            <img src="js.png" alt="Image 3">
-                            <div class="hover-text">Js</div>
-                        </div>
-                        <div class="slide side image-container">
-                            <img src="node.png" alt="Image 4">
-                            <div class="hover-text">NodeJs</div>
-                        </div>
-                        <div class="slide side image-container">
-                            <img src="php.png" alt="Image 5">
-                            <div class="hover-text">Php</div>
-                        </div>
-                        <div class="slide side image-container">
-                            <img src="giticon.png" alt="Image 6">
-                            <div class="hover-text">GitHub</div>
-                        </div>
-                        <div class="slide side image-container">
-                            <img src="c++.png" alt="Image 7">
-                            <div class="hover-text">C++</div>
-                        </div>
-                        <div class="slide side image-container">
-                            <img src="csharp.svg" alt="Image 8">
-                            <div class="hover-text">C#</div>
-                        </div>
-                    </div>
+
+                <br>
+                <div>
                     
+                    <div class="slideshow-container">
+                        <div class="slides">
+                            <div class="slide hidden image-container">
+                                <img src="html.png" alt="Image 1">
+                                <div class="hover-text">Html</div>
+                            </div>
+                            <div class="slide side image-container">
+                                <img src="css.png" alt="Image 2">
+                                <div class="hover-text">Css</div>
+                            </div>
+                            <div class="slide active image-container">
+                                <img src="js.png" alt="Image 3">
+                                <div class="hover-text">Js</div>
+                            </div>
+                            <div class="slide side image-container">
+                                <img src="node.png" alt="Image 4">
+                                <div class="hover-text">NodeJs</div>
+                            </div>
+                            <div class="slide side image-container">
+                                <img src="php.png" alt="Image 5">
+                                <div class="hover-text">Php</div>
+                            </div>
+                            <div class="slide side image-container">
+                                <img src="giticon.png" alt="Image 6">
+                                <div class="hover-text">GitHub</div>
+                            </div>
+                            <div class="slide side image-container">
+                                <img src="c++.png" alt="Image 7">
+                                <div class="hover-text">C++</div>
+                            </div>
+                            <div class="slide side image-container">
+                                <img src="csharp.svg" alt="Image 8">
+                                <div class="hover-text">C#</div>
+                            </div>
+                        </div>
                 </div>
 
+            </div>
             </div>
         </div>
         
@@ -717,24 +759,24 @@
     <section class="animated  box bigger">
         <h2 id="projecth2">&#9830; Projects</h2>
         <div id="main">
-            <span><a href="https://csikszabi04.github.io/tetris/" target="_balnk">Tetris<img src="tetris.png"></a></span>
-            <span><a href="https://csikszabi04.github.io/mouse/eger.html" target="_blank">Mouse<img src="sajt.png"  alt=""> </a></span>
-            <span><a href="https://csikszabi04.github.io/Utvonal/" target="_blank">Route <img src="utvonal.png"  alt=""></a></span>
-            <span><a href="https://csikszabi04.github.io/mappak1/" target="_blank">Folders <img src="mappak.png" alt=""></a></span>
-            <span><a href="https://csikszabi04.github.io/labirintus/" target="_blank">Labyrinth <img src="labirintus.png" alt=""></a></span>
-            <span><a href="https://csikszabi04.github.io/alien/alien.html" target="_blank">Alien<img src="alien.png" alt=""></a> </span>
-            <span><a href="https://csikszabi04.github.io/box/" target="_blank">Box<img src="dobozok.png" alt=""></a></span>
-            <span><a href="https://csikszabi04.github.io/diamond/" target="_blank">Diamond<img src="diamond.png" alt=""></a> </span>
-            <span><a href="https://csikszabi04.github.io/github/" target="_blank">GitTest<img src="git.png" alt=""></a></span>
-            <span><a href="https://csikszabi04.github.io/hangman/" target="_blank">Hangman<img src="hang.png" alt=""></a> </span>
-            <span><a href="video.html" target="_blank">?<img src="questionmark.png" alt=""></a> </span>
+            <span style="font-size:3vw" ><a href="https://csikszabi04.github.io/tetris/" target="_balnk">Tetris<img style="width:100%;" src="tetris.png"></a></span>
+            <span style="font-size:3vw" ><a href="https://csikszabi04.github.io/mouse/eger.html" target="_blank">Mouse<img style="width:100%;" src="sajt.png"  alt=""> </a></span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/Utvonal/" target="_blank">Route <img style="width:100%;" src="utvonal.png"  alt=""></a></span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/mappak1/" target="_blank">Folders <img style="width:100%;" src="mappak.png" alt=""></a></span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/labirintus/" target="_blank">Labyrinth <img style="width:100%;" src="labirintus.png" alt=""></a></span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/alien/alien.html" target="_blank">Alien<img style="width:100%;" src="alien.png" alt=""></a> </span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/box/" target="_blank">Box<img style="width:100%;" src="dobozok.png" alt=""></a></span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/diamond/" target="_blank">Diamond<img style="width:100%;" src="diamond.png" alt=""></a> </span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/github/" target="_blank">GitTest<img style="width:100%;" src="git.png" alt=""></a></span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/hangman/" target="_blank">Hangman<img style="width:100%;" src="hang.png" alt=""></a> </span>
+            <span style="font-size:3vw"><a href="video.html" target="_blank">?<img style="width:100%;" src="questionmark.png" alt=""></a> </span>
         </div>
     </section>
 
     <section class="animated bigger" class="projectss">
         <div class="row">
             <div class="project col-md-4">
-                <h2>Timeless Web Presence</h2>
+                <h2 >Timeless Web Presence</h2>
                 <p class="project-description">
                   Crafted a web presence that exudes sophistication and stands the test of time. Combining elegance with modernity, this creation reflects the essence of enduring style.
                 </p>
