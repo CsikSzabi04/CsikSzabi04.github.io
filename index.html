@@ -18,7 +18,7 @@
         h1 { animation: rotateColor 5s infinite linear;  padding-top: 10px;  font-size: 4em;   margin: 0;  color: #5e1212;   letter-spacing: 3px; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); }
         h2 {  animation: rotateColor 5s infinite linear;  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);  font-size: 2.5em;  margin-top: 5px;   margin-bottom: 10px;   color: #791b1bd5;   animation: slideIn 1s ease-out; }
         p {  font-size: 1.4em;  line-height: 1.6;   color: #dddddd;  animation: slideIn 1s ease-out; }
-        section { margin: 0 auto;padding: 25px;  margin-bottom: 40px;   background-color: #1c1c1c;  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);  border-radius: 15px;  width: 75%; }
+        section { margin: 0 auto; padding: 25px;  margin-bottom: 40px;   background-color: #1c1c1c;  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);  border-radius: 15px;  width: 90%; }
         section #container {    width: 110%; }
         .project {   margin-bottom: 30px;}
         .projecth4 a {    color: #ffffffec;   margin-bottom: 10px; }
@@ -65,7 +65,8 @@
                 opacity: 0.8;
             }
         }
-        #main {  width: 100%;}
+        #main { margin: 0px auto; width: 100%;}
+        #cen{margin: 0px auto; display: inline-flex; position: relative;}
         span {
             width: 200px;
             height: 200px;
@@ -77,13 +78,11 @@
             box-shadow: 0px 0px 10px black;
             border-radius: 15px;
             display: inline-flex;
-            justify-content: center;
-            align-items: center;
-            margin: 10px;
+            margin: 0 auto;
             text-align: center;
             animation: slideIn 1s ease-out;
             position: relative;
-            text-align: center;
+            margin-bottom: 20px; margin-left: 10px;
         }
         #git:hover { text-decoration: none; }
         #git {   width: 80px;   height: 80px;  font-size: 0pt;   padding: 10px;   margin-bottom: 40px;   color: rgb(97, 15, 15); }
@@ -208,7 +207,7 @@
         }
 
         @media (max-width: 1200px) {
-            h1 {   font-size: 3.5em;}
+            h1{ font-size: 3vw;}
             .round-image {
                 width: 170px;
                 height: 170px;
@@ -232,9 +231,6 @@
                 width: 90px;
                 height: 90px;
             }
-            .slideshow-container {
-                margin-left: 45%;
-            }
             p{
                 font-size: 2vw;
             }
@@ -244,7 +240,7 @@
         }
 
         @media (max-width: 700px) {
-            h1 {font-size: 3em;}
+            h1{ font-size: 2vw;}
             .round-image {
                 width: 130px;
                 height: 130px;
@@ -252,7 +248,7 @@
                 display: block;
                 border-radius: 70%;
             }
-            h2 {font-size: 1.8em;}
+            h2 {font-size: 3vw;}
             .notlikeall {
             
                 display:block;
@@ -274,17 +270,12 @@
             }
             span a {    font-size: 50%; }
             span img {
-                width: 60px;
-                height: 30px;
+                width: 1px; height: 1px; opacity: 0;
             }
             .sor{
                 display: inline-block;
             }
-            .slideshow-container {
-                margin-left: 105%;
-                height: 100px;
-            }
-            .slide img {  width: 50%; height: auto;  border-radius: 10px; }
+
             p{
                 font-size: 1.4vw;
             }
@@ -308,7 +299,7 @@
                 border-radius: 50%;
             }
             h2 {
-                font-size: 1.5em;
+                font-size: 3vw;
             }
             section {
                 width: 60%;
@@ -326,24 +317,20 @@
                 width: 1px; height: 1px; opacity: 0;
             }
             #sads{opacity: 0;}
-            h1{font: large;}
+            h1{ font-size: 1.5vw;}
              h2, h3, h4{
                 font-size: medium;
             }
             #sads{opacity: 0;}
             #leftname{font-size: small;}
-            .skill p{font-size: 10px;}
-            .slideshow-container {
-                margin-left: 10%; float: right; height: 100px;
-            }
             body{
                 font-size: 1.2vw;
             }
             .sk p{
-                font-size: 1.2vw;
+                font-size: 1.4vw;
             }
             .m p{
-                font-size: 1.2vw;
+                font-size: 1.4vw;
             }
         }
 
@@ -357,16 +344,20 @@
             span a {
                 font-size: 40%;
             }
-            h1{font: large;}
-            h2, h3, h4, p{
+            h1{ font-size: 2.5vw;}
+            h2{ font-size: 2.5vw;}
+            h3, h4, p{
                 font-size: 1rem;
             }
             #leftname{font-size: small;}
             body{
-                font-size: 1.1vw;
+                font-size: 1.2vw;
             }
             .sk p{
-                font-size: 1.1.vw;
+                font-size: 1.2vw;
+            }
+            .m p{
+                font-size: 1.2vw;
             }
         }
 
@@ -382,10 +373,8 @@
             span img {
                 width: 1px; height: 1px; opacity: 0;
             }
-            .slideshow-container {
-                margin-left: 10%;
-                float: right;
-            }
+            h1{ font-size: 1.3vw;}
+
             body{
                 font-size: 1.1vw;
             }
@@ -416,9 +405,7 @@
             span a {
                 font-size: 30%;
             }
-            .slideshow-container {
-                margin-left: 5%; float: right;
-            }
+
             body{
                 font-size: 1vw;
             }
@@ -519,12 +506,12 @@
             margin-left: 30%;
             float: left;
             position: relative;
-            width: 60%;
-            height: 100%;
+            width: 70%;
+            height: 320px;
             overflow: hidden;
         }
 
-        .slideshow-container img{max-width: 200px; max-height: 200px; }
+        .slideshow-container img{max-width: 240px; max-height: 240px; }
 
         .slides {
             display: flex;
@@ -533,6 +520,7 @@
 
         .slide {
             min-width: 60%; 
+            min-height: 100%;
             transition: opacity 1s ease; 
             display: flex;
             justify-content: center;
@@ -548,7 +536,7 @@
         .image-container .hover-text {
             position: absolute;
             top: 120%;
-            left: 42%;
+            left: 40%;
             transform: translate(-50%, -50%);
             color: white;
             background-color: rgba(0, 0, 0, 0.5); 
@@ -562,7 +550,7 @@
             opacity: 1;
         }
 
-        .slide img {  width: 90%; height: auto;  border-radius: 10px; }
+        .slide img {  width: 90%; height: 100%; border-radius: 10px; }
 
         .slide.hidden {  opacity: 0; }
 
@@ -641,7 +629,7 @@
     .social-icon:hover {
       color: #9c5f48;
     }
-    #i{width:110%; height: 50%;}
+
 
     /* Matrix */
     .particles { position: absolute; background-size: cover; top: 0; left: 0;  width: 100%; height: 100%; overflow: hidden; background-color: black;  z-index: 999;   }
@@ -651,6 +639,7 @@
     .hide {  opacity: 0;  transition: opacity 1s ease;  }
     .scrollable {overflow: auto; }
     #center{margin: 0 auto; display:inline-block ; }
+
     </style>
 
 </head>
@@ -707,11 +696,8 @@
                     <p>I have managed AWS, GCP, Github and various other cloud services for multiple start-ups and my own projects.</p>
                 </div>
             </div>
-            <div class="col-md-6 " id="i">
-
-                <br>
-                <div>
-                    
+            <div class="col-md-6 ">
+                <div>   
                     <div class="slideshow-container">
                         <div class="slides">
                             <div class="slide hidden image-container">
@@ -746,30 +732,24 @@
                                 <img src="csharp.svg" alt="Image 8">
                                 <div class="hover-text">C#</div>
                             </div>
-                        </div>
+                    </div>
                 </div>
-
             </div>
             </div>
         </div>
-        
     </section>
 
 
-    <section class="animated  box bigger">
+    <section class="animated box bigger ko">
         <h2 id="projecth2">&#9830; Projects</h2>
         <div id="main">
             <span style="font-size:3vw" ><a href="https://csikszabi04.github.io/tetris/" target="_balnk">Tetris<img style="width:100%;" src="tetris.png"></a></span>
             <span style="font-size:3vw" ><a href="https://csikszabi04.github.io/mouse/eger.html" target="_blank">Mouse<img style="width:100%;" src="sajt.png"  alt=""> </a></span>
-            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/Utvonal/" target="_blank">Route <img style="width:100%;" src="utvonal.png"  alt=""></a></span>
-            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/mappak1/" target="_blank">Folders <img style="width:100%;" src="mappak.png" alt=""></a></span>
-            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/labirintus/" target="_blank">Labyrinth <img style="width:100%;" src="labirintus.png" alt=""></a></span>
-            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/alien/alien.html" target="_blank">Alien<img style="width:100%;" src="alien.png" alt=""></a> </span>
+            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/labirintus/" target="_blank">Lab<img style="width:100%;" src="labirintus.png" alt=""></a></span>
             <span style="font-size:3vw"><a href="https://csikszabi04.github.io/box/" target="_blank">Box<img style="width:100%;" src="dobozok.png" alt=""></a></span>
             <span style="font-size:3vw"><a href="https://csikszabi04.github.io/diamond/" target="_blank">Diamond<img style="width:100%;" src="diamond.png" alt=""></a> </span>
-            <span style="font-size:3vw"><a href="https://csikszabi04.github.io/github/" target="_blank">GitTest<img style="width:100%;" src="git.png" alt=""></a></span>
             <span style="font-size:3vw"><a href="https://csikszabi04.github.io/hangman/" target="_blank">Hangman<img style="width:100%;" src="hang.png" alt=""></a> </span>
-            <span style="font-size:3vw"><a href="video.html" target="_blank">?<img style="width:100%;" src="questionmark.png" alt=""></a> </span>
+            <div id="cen"><span style="font-size:3vw"><a href="video.html" target="_blank">?<img style="width:100%;" src="questionmark.png" alt=""></a> </span></div>
         </div>
     </section>
 
@@ -1019,7 +999,7 @@
                 });
             }, 1000); 
         }
-        setTimeout(hideMatrixEffectAndScroll, 3000);
+        setTimeout(hideMatrixEffectAndScroll, 2000);
 
     </script>
 </body>
