@@ -275,13 +275,16 @@
             .sor{
                 display: inline-block;
             }
-
+            .slideshow-container{
+                height: 80%;
+            }
             p{
                 font-size: 1.4vw;
             }
             .m p{
                 font-size: 1.4vw;
             }
+            .slideshow-container img{max-width: 200px; max-height: 200px; }
         }
 
         @media (max-width: 400px) {
@@ -332,6 +335,10 @@
             .m p{
                 font-size: 1.4vw;
             }
+            .slideshow-container{
+                height: 60%; margin: 0px auto;
+            }
+            .slideshow-container img{max-width: 100px; max-height: 100px; }
         }
 
         @media(max-width: 384px){
@@ -359,6 +366,9 @@
             .m p{
                 font-size: 1.2vw;
             }
+            .slideshow-container{
+                height: 60%;
+            }
         }
 
         @media(max-width: 340px){
@@ -383,6 +393,9 @@
             }
             .m p{
                 font-size: 1.1vw;
+            }
+            .slideshow-container{
+                height: 40%;
             }
         }
 
@@ -409,6 +422,10 @@
             body{
                 font-size: 1vw;
             }
+            .slideshow-container{
+                height: 20%;
+            }
+            .slideshow-container img{max-width: 50px; max-height: 50px; }
         }
 
         /* -----------------------------------------------------------------------------------------------------------------------------------------------------*/
@@ -502,13 +519,11 @@
         /* slideshow*/
 
         .slideshow-container {
-            margin-top: 10px;
-            margin-left: 30%;
-            float: left;
             position: relative;
             width: 70%;
             height: 320px;
             overflow: hidden;
+            margin: 0px auto;
         }
 
         .slideshow-container img{max-width: 240px; max-height: 240px; }
@@ -536,7 +551,7 @@
         .image-container .hover-text {
             position: absolute;
             top: 120%;
-            left: 40%;
+            left: 35%;
             transform: translate(-50%, -50%);
             color: white;
             background-color: rgba(0, 0, 0, 0.5); 
