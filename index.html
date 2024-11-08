@@ -7,7 +7,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
     <link rel="icon" type="image/x-icon" href="02.png">
     <title>Portfolio</title>
     <style>
@@ -495,7 +494,7 @@
         }
         #emailp{ font-size: 1rem; color: green;}
         #or{margin: 10px 20px;}
-        .toggle { margin-top: 20px;  position : relative ;  display : inline-block;  width : 40px; height : 20px;  background-color: #1c1c1c;  border-radius: 30px; border: 2px solid rgb(48, 48, 48);  }   
+        .toggle { opacity: 0.1; margin-top: 20px;  position : relative ;  display : inline-block;  width : 40px; height : 20px;  background-color: #1c1c1c;  border-radius: 30px; border: 2px solid rgb(48, 48, 48);  }   
         .toggle:after { content: '';  position: absolute; width: 16px;  height: 16px; border-radius: 50%; background-color: rgb(43, 43, 43); left: 1px;  transition:  all 0.5s;}     
         .checkbox:checked + .toggle::after {   left : 30px;  }    
         .checkbox:checked + .toggle { background-color: rgb(0, 19, 128);}    
@@ -756,11 +755,163 @@
             letter-spacing: 1px;
         }
         .aq h1{color: #333333;}
+
+        /* Static */
+        .static-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url('https://www.transparenttextures.com/patterns/asfalt-dark.png'), black;
+      background-blend-mode: multiply;
+      filter: contrast(200%) brightness(200%);
+      pointer-events: none;
+      opacity: 0;
+      z-index: 10;
+      transition: opacity 0.4s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Static Lines for Flicker Effect */
+    .static-lines {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 5;
+      opacity: 0;
+      animation: staticLines 0.5s steps(30) infinite;
+    }
+
+    /* Randomized Static Lines Animation */
+    @keyframes staticLines {
+      0% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 2px, #7e050577 2px, #7e050577 3px);
+        opacity: 0.4;
+      }
+      10% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 1px, #7e050577 1px, #7e050577 3px);
+        opacity: 0.6;
+      }
+      20% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 4px, #7e050577 4px, #7e050577 5px);
+        opacity: 0.5;
+      }
+      30% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 3px, #7e050577 3px, #7e050577 4px);
+        opacity: 0.8;
+      }
+      40% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 2px, #7e050577 2px, #7e050577 5px);
+        opacity: 0.4;
+      }
+      50% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 1px, #7e050577 1px, #7e050577 2px);
+        opacity: 0.6;
+      }
+      60% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 2px, #7e050577 2px, #7e050577 4px);
+        opacity: 0.7;
+      }
+      70% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 3px, #7e050577 3px, #7e050577 5px);
+        opacity: 0.3;
+      }
+      80% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 2px, #7e050577 2px, #7e050577 4px);
+        opacity: 0.6;
+      }
+      90% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 3px, #7e050577 3px, #7e050577 6px);
+        opacity: 0.7;
+      }
+      100% {
+        background: repeating-linear-gradient(0deg, transparent, transparent 1px, #7e050577 1px, #7e050577 2px);
+        opacity: 0.4;
+      }
+    }
+
+    /* Centered Smile */
+    .smile {
+      font-size: 100px;
+      color: #00ff00;
+      text-shadow: 0 0 10px #00ff00, 0 0 20px #d9ff00;
+      opacity: 0;
+      animation: smileFade 0.8s ease-in-out forwards;
+    }
+
+    /* Keyframes for smile fade-in */
+    @keyframes smileFade {
+      0% { opacity: 0; transform: scale(0.8); }
+      50% { opacity: 0.6; transform: scale(1.1); }
+      100% { opacity: 1; transform: scale(1); }
+    }
+
+    /* Keyframes for intense static effect */
+    @keyframes static-effect {
+      0%, 100% { background-color: #000; opacity: 0.4; }
+      2% { background-color: #00ff0077; opacity: 0.9; filter: brightness(250%); }
+      4% { background-color: #000; opacity: 0.7; filter: brightness(150%); }
+      6% { background-color: #7e050577; opacity: 0.3; filter: brightness(120%); }
+      8% { background-color: #000; opacity: 0.9; filter: brightness(200%); }
+      10% { background-color: #00ff0077; opacity: 0.5; }
+      12% { background-color: #000; opacity: 0.6; filter: brightness(180%); }
+      14% { background-color: #7e050577; opacity: 0.6; filter: brightness(130%); }
+      16% { background-color: #000; opacity: 0.9; }
+      18% { background-color: #00ff0077; opacity: 0.4; }
+      20% { background-color: #000; opacity: 0.8; filter: brightness(200%); }
+      22% { background-color: #00ff0077; opacity: 0.5; }
+      24% { background-color: #7e050577; opacity: 0.7; filter: brightness(180%); }
+      26% { background-color: #7e050577; opacity: 0.4; }
+      28% { background-color: #000; opacity: 0.8; filter: brightness(170%); }
+      30% { background-color: #00ff0077; opacity: 0.5; filter: brightness(220%); }
+      32% { background-color: #7e050577; opacity: 0.9; }
+      34% { background-color: #00ff0077; opacity: 0.7; }
+      36% { background-color: #000; opacity: 0.6; filter: brightness(200%); }
+      38% { background-color: #7e050577; opacity: 0.5; }
+      40% { background-color: #000; opacity: 0.7; }
+      42% { background-color: #00ff0077; opacity: 0.9; filter: brightness(150%); }
+      44% { background-color: #000; opacity: 0.8; }
+      46% { background-color: #7e050577; opacity: 0.6; }
+      48% { background-color: #000; opacity: 0.9; }
+      50% { background-color: #00ff0077; opacity: 0.5; filter: brightness(200%); }
+      52% { background-color: #000; opacity: 0.7; }
+      84% { background-color: #2470069a; opacity: 0.9; filter: brightness(150%); }
+      86% { background-color: #1b860086; opacity: 0.4; }
+      88% { background-color: #000; opacity: 0.8; }
+      90% { background-color: #7e050577; opacity: 0.6; }
+      92% { background-color: #000; opacity: 0.9; }
+      94% { background-color: #00ff0077; opacity: 0.5; }
+      96% { background-color: #000; opacity: 0.7; }
+      98% { background-color: #7e050577; opacity: 0.4; }
+    }
+    .static-active {
+      animation: static-effect 1s steps(50) forwards;
+      opacity: 1;
+    }
+
+    @keyframes shadowFlicker {
+      0%, 100% { opacity: 0.1; transform: scale(1); }
+      20% { opacity: 0.3; transform: scale(1.1); }
+      40% { opacity: 0.2; transform: scale(1.05); }
+      60% { opacity: 0.35; transform: scale(1.2); }
+      80% { opacity: 0.25; transform: scale(1.15); }
+    }
     </style>
 
 </head>
 <body onload="start();">
     <div class="particles"></div>
+    <div id="staticOverlay" class="static-overlay">
+        <div class="static-lines"></div> <!-- Static lines layer -->
+        <div class="alastor-shadow"></div> 
+        <div class="smile">:)</div>
+      </div>
     <header >
         <div class="upper-div ">
             <div  id="leftname" class="logo">Cs_Szabj04 <br> <p id="emailp"></p></div>
@@ -776,7 +927,7 @@
             </div>
             <h1 style="font-size:5vw">Szabolcs A. Csík</h1>
         </div>
-        <h2>My projects<a id="git" href="https://github.com/csikszabi04" class="fa fa-github" style="font-size:40px;" target="blank">&copy;</a></a></h2>
+        <h2>My projects<a id="git" href="https://github.com/csikszabi04" class="fa fa-github" style="font-size:40px;" onclick="triggerTransition(event)">&copy;</a></a></h2>
         <div id="scroll-down">↓</div> <!--Scrolls down-->
     </header>
 
@@ -785,7 +936,7 @@
     <section class="animated box bigger" id="ezvan" class="box">
         <div class="container ">
             <div id="left"><a href="https://csikszabi04.github.io/magamrol/" target="_blank"></a>
-                <h2 id="myself"><a href="https://csikszabi04.github.io/card/" target="_blank">Bussiness Card&lt;--</a></h2>
+                <h2 id="myself"><a href="https://csikszabi04.github.io/card/" onclick="triggerTransition(event)" >Bussiness Card&lt;--</a></h2>
             </div>
             <div id="center">
                 <div class="round-image" id="picdiv">
@@ -885,7 +1036,7 @@
             <span style="font-size:3vw"><a href="https://csikszabi04.github.io/box/" target="_blank">Box<img style="width:100%;" src="dobozok.png" alt=""></a></span>
             <span style="font-size:3vw"><a href="https://csikszabi04.github.io/diamond/" target="_blank">Diamond<img style="width:100%;" src="diamond.png" alt=""></a> </span>
             <span style="font-size:3vw"><a href="https://csikszabi04.github.io/hangman/" target="_blank">Hangman<img style="width:100%;" src="hang.png" alt=""></a> </span>
-            <div id="cen"><span style="font-size:3vw"><a href="video.html" target="_blank">?<img style="width:100%;" src="questionmark.png" alt=""></a> </span></div>
+            <div id="cen"><span onclick="triggerTransitione()" style="font-size:3vw"><a >?<img style="width:100%;" src="questionmark.png" ></a> </span></div>
         </div>
     </section>
 
@@ -1173,6 +1324,23 @@
             });
         });
 
+
+        function triggerTransition(event) {
+            const staticOverlay = document.getElementById('staticOverlay');
+            event.preventDefault();
+            staticOverlay.classList.add('static-active');
+            setTimeout(() => {
+                window.location.href = event.target.href;
+            }, 900); 
+        }
+
+        function triggerTransitione() {
+            const staticOverlay = document.getElementById('staticOverlay');
+            staticOverlay.classList.add('static-active');
+            setTimeout(() => {
+                window.location.href = "https://csikszabi04.github.io/video.html";
+            }, 900); 
+        }
     </script>
 </body>
 
